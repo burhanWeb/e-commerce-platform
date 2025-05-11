@@ -17,7 +17,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { fetchCart } from "../redux/slices/cart/CartSlice";
-import { logout } from "../redux/slices/auth/AuthSlice";
+import { logout, logoutUser } from "../redux/slices/auth/AuthSlice";
+import { removeUserFromLocalStorage } from "../utils/localStorage";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -31,8 +32,10 @@ const Navbar = () => {
   }, [dispatch]);
 
   const handleLogout = () => {
+    removeUserFromLocalStorage();
     dispatch(logout());
-    // navigate("/login");
+    dispatch(logoutUser());
+    navigate("/login");
   };
 
   return (

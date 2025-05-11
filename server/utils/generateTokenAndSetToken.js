@@ -7,12 +7,13 @@ const createJWT = (data, res) => {
 
   const oneDay = 1000 * 60 * 60 * 24;
 
-  res.cookie("token", token),
-    {
-      httpOnly: true,
-      maxAge: new Date(Date.now() + oneDay),
-      sameSite: "None",
-    };
+  res.cookie("token", token, {
+    httpOnly: true, // Cannot be accessed via JS on the client
+    maxAge: oneDay, // 1 day in milliseconds
+    sameSite: "None", // Allows cross-site requests
+    secure: true, // Required when using sameSite: "None"
+  });
+
   return token;
 };
 

@@ -3,6 +3,7 @@ import customFetch from "../../../utils/axios";
 import {
   addUserToLocalStorage,
   getUserFromLocalStorage,
+  removeUserFromLocalStorage,
 } from "../../../utils/localStorage";
 import { toast } from "react-toastify";
 
@@ -97,6 +98,8 @@ export const updateUserRole = createAsyncThunk(
         `/user/admin/user/${userId}`,
         updatedData
       );
+      localStorage.removeItem("user");
+
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
@@ -121,6 +124,13 @@ export const AuthSlice = createSlice({
       if (user) {
         user.role = updatedData.role;
       }
+    },
+    logoutUser: (state) => {
+      state.user = null;
+      state.isLoading = false;
+      state.error = null;
+      state.allUsers = [];
+      removeUserFromLocalStorage();
     },
   },
   extraReducers: (builder) => {
@@ -222,7 +232,6 @@ export const AuthSlice = createSlice({
     });
     builder.addCase(logout.fulfilled, (state) => {
       state.isLoading = false;
-      localStorage.removeItem("user");
       toast.success("Logout successful!");
     });
     builder.addCase(logout.rejected, (state, action) => {
@@ -232,5 +241,5 @@ export const AuthSlice = createSlice({
   },
 });
 
-export const { updateRoleInState } = AuthSlice.actions;
+export const { updateRoleInState, logoutUser } = AuthSlice.actions;
 export default AuthSlice.reducer;
