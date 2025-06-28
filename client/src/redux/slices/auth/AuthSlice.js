@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import customFetch from "../../../utils/axios";
+import customFetch from "../../../utils/axios.js";
 import {
   addUserToLocalStorage,
   getUserFromLocalStorage,
