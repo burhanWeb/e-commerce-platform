@@ -6,5 +6,6 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     historyApiFallback: true,
+    allowedHosts: ["e-commerce-platform-vmml.onrender.com"],
   },
 });
