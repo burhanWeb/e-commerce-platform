@@ -1,28 +1,26 @@
-FROM node:20
+# Stage 1: Build
+FROM node:20 AS builder
 
-
-# Create app directory
 WORKDIR /app
 
-
-# Copy package.json and package-lock.json
 COPY package.json package-lock.json ./
-
-# Install app dependencies
 RUN npm install --legacy-peer-deps
 
-
-# Copy app source code
 COPY . .
+RUN npm run build
 
+# Stage 2: Serve static files
+FROM node:20
 
+WORKDIR /app
 
+# Install a lightweight static file server
+RUN npm install -g serve
 
-# Expose the port the app runs on
+# Copy build output from builder
+COPY --from=builder /app/dist ./dist
+
 EXPOSE 3000
 
-# Start the app
-CMD ["npm", "run", "dev"]
-
-
-
+# Serve the Vite build
+CMD ["serve", "dist", "-l", "3000"]
