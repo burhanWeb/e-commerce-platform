@@ -27,3 +27,4 @@ serverless-state.json
 
 # Docs and markdown
 *.md
+.env

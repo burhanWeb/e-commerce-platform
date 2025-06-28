@@ -115,7 +115,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-ap-south-1-0e7d567d-9663",
-                  "S3Key": "serverless/ecommerce-api/prod/1751081970823-2025-06-28T03:39:30.823Z/ecommerce-api.zip"
+                  "S3Key": "serverless/ecommerce-api/prod/1751082514917-2025-06-28T03:48:34.917Z/ecommerce-api.zip"
                 },
                 "Handler": "handler.handler",
                 "Runtime": "nodejs18.x",
@@ -339,7 +339,7 @@
         "artifactsS3KeyDirname": "serverless/ecommerce-api/prod/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-ap-south-1-0e7d567d-9663",
         "artifact": "/home/burhan/Downloads/e-commerce-platform/server/.serverless/ecommerce-api.zip",
-        "artifactDirectoryName": "serverless/ecommerce-api/prod/1751081970823-2025-06-28T03:39:30.823Z"
+        "artifactDirectoryName": "serverless/ecommerce-api/prod/1751082514917-2025-06-28T03:48:34.917Z"
       }
     },
     "provider": {
@@ -451,7 +451,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-ap-south-1-0e7d567d-9663",
-                "S3Key": "serverless/ecommerce-api/prod/1751081970823-2025-06-28T03:39:30.823Z/ecommerce-api.zip"
+                "S3Key": "serverless/ecommerce-api/prod/1751082514917-2025-06-28T03:48:34.917Z/ecommerce-api.zip"
               },
               "Handler": "handler.handler",
               "Runtime": "nodejs18.x",
@@ -783,7 +783,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-ap-south-1-0e7d567d-9663",
-              "S3Key": "serverless/ecommerce-api/prod/1751081970823-2025-06-28T03:39:30.823Z/ecommerce-api.zip"
+              "S3Key": "serverless/ecommerce-api/prod/1751082514917-2025-06-28T03:48:34.917Z/ecommerce-api.zip"
             },
             "Handler": "handler.handler",
             "Runtime": "nodejs18.x",
