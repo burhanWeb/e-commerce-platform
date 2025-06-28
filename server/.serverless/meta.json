@@ -115,7 +115,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-ap-south-1-0e7d567d-9663",
-                  "S3Key": "serverless/ecommerce-api/prod/1751080651433-2025-06-28T03:17:31.433Z/ecommerce-api.zip"
+                  "S3Key": "serverless/ecommerce-api/prod/1751081970823-2025-06-28T03:39:30.823Z/ecommerce-api.zip"
                 },
                 "Handler": "handler.handler",
                 "Runtime": "nodejs18.x",
@@ -339,7 +339,7 @@
         "artifactsS3KeyDirname": "serverless/ecommerce-api/prod/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-ap-south-1-0e7d567d-9663",
         "artifact": "/home/burhan/Downloads/e-commerce-platform/server/.serverless/ecommerce-api.zip",
-        "artifactDirectoryName": "serverless/ecommerce-api/prod/1751080651433-2025-06-28T03:17:31.433Z"
+        "artifactDirectoryName": "serverless/ecommerce-api/prod/1751081970823-2025-06-28T03:39:30.823Z"
       }
     },
     "provider": {
@@ -451,7 +451,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-ap-south-1-0e7d567d-9663",
-                "S3Key": "serverless/ecommerce-api/prod/1751080651433-2025-06-28T03:17:31.433Z/ecommerce-api.zip"
+                "S3Key": "serverless/ecommerce-api/prod/1751081970823-2025-06-28T03:39:30.823Z/ecommerce-api.zip"
               },
               "Handler": "handler.handler",
               "Runtime": "nodejs18.x",
@@ -663,12 +663,12 @@
     "serviceProviderAwsCfStackName": "ecommerce-api-prod",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:ap-south-1:107346957471:stack/ecommerce-api-prod/1cfebd50-536e-11f0-a7dd-024182c08517",
     "serviceProviderAwsCfStackCreated": "2025-06-27T15:48:05.385Z",
-    "serviceProviderAwsCfStackUpdated": "2025-06-28T02:56:14.669Z",
+    "serviceProviderAwsCfStackUpdated": "2025-06-28T03:17:39.240Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "AppLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:ap-south-1:107346957471:function:ecommerce-api-prod-app:14",
+        "OutputValue": "arn:aws:lambda:ap-south-1:107346957471:function:ecommerce-api-prod-app:15",
         "Description": "Current Lambda function version",
         "ExportName": "sls-ecommerce-api-prod-AppLambdaFunctionQualifiedArn"
       },
@@ -783,7 +783,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-ap-south-1-0e7d567d-9663",
-              "S3Key": "serverless/ecommerce-api/prod/1751080651433-2025-06-28T03:17:31.433Z/ecommerce-api.zip"
+              "S3Key": "serverless/ecommerce-api/prod/1751081970823-2025-06-28T03:39:30.823Z/ecommerce-api.zip"
             },
             "Handler": "handler.handler",
             "Runtime": "nodejs18.x",
