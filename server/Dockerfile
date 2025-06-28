@@ -7,8 +7,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Install app dependencies (with --legacy-peer-deps if necessary)
-RUN npm install --legacy-peer-deps
-
+RUN npm install --production 
 # Copy the app source code
 COPY . .
 
@@ -19,4 +18,4 @@ COPY .env ./
 EXPOSE 8000
 
 # Start the app
-CMD ["npm", "run", "dev"]
+CMD ["node", "server.js" ]

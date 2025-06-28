@@ -1,0 +1,36 @@
+service: ecommerce-api
+
+frameworkVersion: ">=4.0.0"
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-south-1
+  stage: prod
+  environment:
+    MONGO_URL: ${env:MONGO_URL}
+    JWT_SECRET: ${env:JWT_SECRET}
+    KEY_ID: ${env:KEY_ID}
+    KEY_SECRET: ${env:KEY_SECRET}
+    CLOUD_NAME: ${env:CLOUD_NAME}
+    API_KEY: ${env:API_KEY}
+    API_SECRET: ${env:API_SECRET}
+    FRONT_END_URL: ${env:FRONT_END_URL}
+
+functions:
+  app:
+    handler: handler.handler
+    events:
+      - httpApi: "*"
+
+package:
+  patterns:
+    - handler.mjs
+    - server.js
+    - node_modules/**
+    - "!node_modules/.bin/**"
+    - "!.gitignore"
+    - "!Dockerfile"
+    - "!docker-compose.yml"
+    - "!README.md"
+    - "!*.log"
+    - "!*.md"

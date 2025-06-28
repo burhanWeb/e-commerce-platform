@@ -1,15 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./db/connect.js";
-import path from "path";
-import { fileURLToPath } from "url";
-
-// mimic __dirname
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Load .env
-dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -46,5 +37,6 @@ app.use("/api/v1/orders", OrderRoutes);
 
 app.listen(process.env.PORT, async () => {
   await connectDB(process.env.MONGO_URL);
-  console.log(`Server is listening on port ${process.env.PORT}`);
 });
+
+export default app;
